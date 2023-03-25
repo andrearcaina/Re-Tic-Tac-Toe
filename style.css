@@ -1,0 +1,121 @@
+@font-face {
+    font-family: TicTacToe;
+    src: url(TicTacToe.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #12181B;
+    height: 100vh;
+    padding-top: 1px;
+    
+    font-family: TicTacToe;
+
+    user-select: none;
+    overflow: hidden;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 12.5%;
+}
+
+.hide {
+    display: none;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    
+    margin: 0 auto;    
+    max-width: 300px;
+}
+
+.cell {
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 50px;
+    
+    cursor: pointer;
+}
+
+.cell:nth-child(1n) {
+    border-top: none;
+    border-left: none;
+}
+
+.cell:nth-child(3n) {
+    border-right: none;
+}
+
+.cell:nth-child(6n) ~.cell {
+    border-bottom: none;
+}
+
+.playerX {
+    color: #09C372;
+}
+
+.playerO {
+    color: #498AFB;
+}
+
+.display {
+    color: white;
+    
+    font-size: 25px;
+    text-align: center;
+    
+    margin-top: 0.1em;
+    margin-bottom: 1.2em;
+}
+
+.display button {
+    font-family: 'itim', cursive;
+    font-size: 20px;
+    
+    background-color: #76b7b7;
+    color: white;
+
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    margin-left: 1em;
+    cursor: pointer;
+
+    transition: 300ms transform;
+}
+
+.display button:hover {
+    cursor: pointer;
+    transform: translateY(-6px);
+    background-color: rgba(29, 236, 101, 0.2);
+}
+
+#attribution {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    
+    background-color: #a9b7c1;
+    padding: 10px;
+    border-radius: 10px;
+    
+    color: #1d2326;
+    box-shadow: 1px 2px 5px 1px rgba(255, 255, 255, 0.2);
+}
